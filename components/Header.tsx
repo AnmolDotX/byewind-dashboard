@@ -111,7 +111,7 @@ const Header = ({
   }
 
   return (
-    <header className="flex items-center justify-between h-16 bg-white border-b border-gray-200 px-6 sticky top-0 dark:bg-gray-900 dark:border-gray-700">
+    <header className="flex items-center justify-between h-16 bg-white border-b border-gray-200 px-6 sticky top-0 dark:bg-gray-900 dark:border-gray-700 z-50">
       <div className="flex items-center space-x-4">
         {/* Left Sidebar Collapse Button */}
         <button

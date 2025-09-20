@@ -21,7 +21,7 @@ const data = [
 
 export default function BarGraphCard() {
   return (
-    <div className="bg-gray-50 p-6 rounded-2xl max-h-[252px]">
+    <div className="bg-gray-50 p-6 rounded-2xl max-h-[252px] z-10">
       <h2 className="text-sm font-semibold mb-4">Projections vs Actuals</h2>
       <ResponsiveContainer width="100%" height={180}>
         <BarChart data={data} barGap={8} barSize={20}>
