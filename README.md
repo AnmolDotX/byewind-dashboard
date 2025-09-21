@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JustPay Dashboard - Static Pixel-Perfect Design Implementation
 
-## Getting Started
+This project is a static, pixel-perfect implementation of a dashboard application, developed as an assignment for JusPay. The primary goal was to meticulously replicate a provided Figma design using modern web technologies.
 
-First, run the development server:
+## 🌟 Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The assignment involved translating a detailed Figma design into a functional, static web dashboard. I've strived for a high degree of pixel-perfection, achieving approximately `95%` accuracy. Minor deviations include the use of alternative icons where exact matches were unavailable and the integration of a different pie chart library due to specific Figma library constraints. Despite these minor adjustments, the overall design fidelity and user experience remain consistent with the original design.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The dashboard features a dynamic layout with interactive elements, including a collapsible left sidebar for navigation, a toggleable right sidebar for activities/notifications, and a theme switcher for light/dark mode. Most of the data displayed is static or generated using dummy data, as per the project requirements.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Pixel-Perfect Design:** Close replication of the provided Figma design.
+- **NOT-Responsive Layout:** As no design was provided for mobile or tablet, so it is made only for laptops or bigger screen.
+- **Collapsible Left Sidebar:** Dynamic navigation with nested routes.
+- **Fully Collapsible Right Sidebar:** For activities, notifications, or supplementary content.
+- **Dynamic Breadcrumbs:** Automatically updates based on the current route in the App Router.
+- **Dark/Light Theme Toggle:** Seamless switching between themes with a dedicated button in the header.
+- **Static Data:** Content is primarily driven by dummy data, fulfilling the static nature of the assignment.
 
-## Learn More
+## 🚀 Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js 15 (App Router):** The React framework for building fast web applications.
+- **TypeScript:** For type-safe development.
+- **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
+- **Shadcn UI:** Reusable components, including the robust Breadcrumb component.
+- **`next-themes`:** For easy and robust dark/light theme management.
+- **`lucide-react`:** A collection of beautiful, handcrafted SVG icons.
+- **`react-icons`:** For additional icon sets which were not there in lucide-react.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Local Setup Instructions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To get a local copy of the project up and running on your machine, follow these simple steps:
 
-## Deploy on Vercel
+1.  **Clone the repository:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    git clone https://github.com/AnmolDotX/byewind-dashboard.git
+    cd byewind-dashboard
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2.  **Install dependencies:**
+    This project uses `npm` as its package manager.
+
+    ```bash
+    npm install --legacy-peer-deps
+    ```
+
+    _Note: `--legacy-peer-deps` is used to handle potential peer dependency conflicts with older packages, ensuring a smoother installation on next.js 15 and react 19._
+
+3.  **Run the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+4.  **Visit the application:**
+    Open your web browser and navigate to `http://localhost:3000`.
+
+You should now see the dashboard application running locally, showcasing the static pixel-perfect design.
+
+---
+
+### 🗓️ Development Timeline
+
+The project was developed within a 2-day timeframe, as the email was seen 2 days after it was received. Despite this, the assignment's constraints and requirements were fully adhered to, and it was completed before the deadline.
