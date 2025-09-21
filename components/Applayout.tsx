@@ -24,7 +24,7 @@ const Applayout = ({ children }: { children: React.ReactNode }) => {
 
       {/* Main content area */}
       <div
-        className={`flex-1 flex flex-col transition-all duration-300
+        className={`flex-1 flex flex-col transition-all duration-300 
           ${isLeftSidebarCollapsed ? "ml-16" : "ml-64"}
           ${isRightSidebarCollapsed ? "mr-0" : "mr-64"}
         `}
@@ -38,7 +38,7 @@ const Applayout = ({ children }: { children: React.ReactNode }) => {
         />
 
         {/* Page content */}
-        <main className="flex-1 p-6 overflow-auto">{children}</main>
+        <main className="flex-1 p-6 overflow-auto ">{children}</main>
       </div>
 
       {/* Right Sidebar */}

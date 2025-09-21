@@ -1,4 +1,5 @@
 import { CardDetails } from "@/app/dashboard/default/page";
+import Link from "next/link";
 import React from "react";
 import { FaArrowTrendDown, FaArrowTrendUp } from "react-icons/fa6";
 
@@ -10,7 +11,9 @@ const DataCard = ({
   idx: number;
 }) => {
   return (
-    <div
+    <Link
+      prefetch
+      href={cardDetails.href}
       key={JSON.stringify(cardDetails) + idx}
       style={{
         backgroundColor: cardDetails.bgColor,
@@ -35,7 +38,7 @@ const DataCard = ({
           )}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 
