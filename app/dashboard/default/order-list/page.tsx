@@ -198,22 +198,24 @@ const OrderList: React.FC = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white dark:bg-black min-h-screen">
       {/* Header */}
       <div className="px-6 py-6">
-        <h1 className="font-semibold text-gray-900 mb-4">Order List</h1>
+        <h1 className="font-semibold text-gray-900 dark:text-white mb-4">
+          Order List
+        </h1>
 
         {/* Toolbar */}
-        <div className="flex items-center justify-between mb-6 bg-[#F7F9FB] py-1 px-2 rounded-lg">
+        <div className="flex items-center justify-between mb-6 bg-[#F7F9FB] dark:bg-white/10 py-1 px-2 rounded-lg">
           <div className="flex items-center space-x-3">
             <button className="p-2 hover:bg-gray-200 cursor-pointer rounded-lg transition-colors">
-              <Plus className="w-5 h-5 text-gray-600" />
+              <Plus className="w-5 h-5 text-gray-600 dark:text-white" />
             </button>
             <button className="p-2 hover:bg-gray-200 cursor-pointer rounded-lg transition-colors">
-              <PiFunnelSimpleBold className="w-5 h-5 text-gray-600" />
+              <PiFunnelSimpleBold className="w-5 h-5 text-gray-600 dark:text-white" />
             </button>
             <button className="p-2 hover:bg-gray-200 cursor-pointer rounded-lg transition-colors">
-              <ArrowUpDown className="w-5 h-5 text-gray-600" />
+              <ArrowUpDown className="w-5 h-5 text-gray-600 dark:text-white" />
             </button>
           </div>
 
@@ -224,38 +226,38 @@ const OrderList: React.FC = () => {
               placeholder="Search user"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-4 py-1 bg-gray-50 border border-gray-200 rounded-md w-[160px] h-[28px]"
+              className="pl-10 pr-4 py-1 bg-gray-50 dark:bg-white/10 border border-gray-200 dark:border-gray-700 rounded-md w-[160px] h-[28px]"
             />
           </div>
         </div>
 
         {/* Table */}
-        <div className="bg-white rounded-lg overflow-hidden">
+        <div className="bg-white dark:bg-black rounded-lg overflow-hidden">
           <table className="w-full">
             <thead>
-              <tr className=" border-b border-gray-200">
+              <tr className=" border-b border-gray-200 dark:border-gray-600">
                 <th className="text-left py-3 px-4 text-sm font-medium text-gray-600 w-4">
                   <input
                     type="checkbox"
                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
                 </th>
-                <th className="text-left py-3 px-4 text-[12px] text-[#1C1C1C40]">
+                <th className="text-left py-3 px-4 text-[12px] text-[#1C1C1C40] dark:text-gray-400">
                   Order ID
                 </th>
-                <th className="text-left py-3 px-4 text-[12px] text-[#1C1C1C40]">
+                <th className="text-left py-3 px-4 text-[12px] text-[#1C1C1C40] dark:text-gray-400">
                   User
                 </th>
-                <th className="text-left py-3 px-4 text-[12px] text-[#1C1C1C40]">
+                <th className="text-left py-3 px-4 text-[12px] text-[#1C1C1C40] dark:text-gray-400">
                   Project
                 </th>
-                <th className="text-left py-3 px-4 text-[12px] text-[#1C1C1C40]">
+                <th className="text-left py-3 px-4 text-[12px] text-[#1C1C1C40] dark:text-gray-400">
                   Address
                 </th>
-                <th className="text-left py-3 px-4 text-[12px] text-[#1C1C1C40]">
+                <th className="text-left py-3 px-4 text-[12px] text-[#1C1C1C40] dark:text-gray-400">
                   Date
                 </th>
-                <th className="text-left py-3 px-4 text-[12px] text-[#1C1C1C40]">
+                <th className="text-left py-3 px-4 text-[12px] text-[#1C1C1C40] dark:text-gray-400">
                   Status
                 </th>
                 <th className="text-left py-3 px-4 text-sm font-medium text-gray-600 w-4"></th>
@@ -265,7 +267,7 @@ const OrderList: React.FC = () => {
               {filteredOrders.map((order, index) => (
                 <tr
                   key={`${order.id}-${index}`}
-                  className="border-b border-gray-100 hover:bg-gray-50 transition-colors"
+                  className="border-b border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-white/10 transition-colors"
                 >
                   <td className="py-4 px-4">
                     <input
@@ -275,7 +277,7 @@ const OrderList: React.FC = () => {
                       className="rounded border-gray-300 accent-black"
                     />
                   </td>
-                  <td className="py-4 px-4 text-xs text-gray-900">
+                  <td className="py-4 px-4 text-xs text-gray-900 dark:text-white">
                     {order.id}
                   </td>
                   <td className="py-4 px-4">
@@ -287,17 +289,17 @@ const OrderList: React.FC = () => {
                         height={24}
                         className="w-5 h-5 rounded-full object-cover"
                       />
-                      <span className="text-xs text-nowrap text-gray-900">
+                      <span className="text-xs text-nowrap text-gray-900 dark:text-white">
                         {order.user.name}
                       </span>
                     </div>
                   </td>
-                  <td className="py-4 px-4 text-xs text-nowrap text-gray-900">
+                  <td className="py-4 px-4 text-xs text-nowrap text-gray-900 dark:text-white">
                     {order.project}
                   </td>
                   <td className="py-4 px-4">
                     <div className="flex items-center space-x-2">
-                      <span className="text-xs text-nowrap text-gray-900">
+                      <span className="text-xs text-nowrap text-gray-900 dark:text-white">
                         {order.address}
                       </span>
                       {order.hasExternalLink && (
@@ -308,7 +310,7 @@ const OrderList: React.FC = () => {
                   <td className="py-4 px-4">
                     <div className="flex items-center space-x-2">
                       <Calendar className="w-4 h-4 text-gray-400" />
-                      <span className="text-xs text-nowrap text-gray-900">
+                      <span className="text-xs text-nowrap text-gray-900 dark:text-white">
                         {order.date}
                       </span>
                     </div>
@@ -342,7 +344,7 @@ const OrderList: React.FC = () => {
 
         {/* Pagination */}
         <div className="flex items-center justify-end space-x-1 mt-4">
-          <button className="p-2 hover:bg-gray-50 rounded-lg transition-colors">
+          <button className="p-2 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors">
             <ChevronLeft className="w-4 h-4 text-gray-600" />
           </button>
           {[1, 2, 3, 4, 5].map((page) => (
@@ -351,14 +353,14 @@ const OrderList: React.FC = () => {
               onClick={() => setCurrentPage(page)}
               className={`px-3 py-2 text-sm rounded-lg transition-colors ${
                 currentPage === page
-                  ? "bg-blue-50 text-blue-600 font-medium"
-                  : "text-gray-600 hover:bg-gray-50"
+                  ? "bg-blue-50 dark:bg-gray-700 dark:text-white text-blue-600 font-medium"
+                  : "text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800"
               }`}
             >
               {page}
             </button>
           ))}
-          <button className="p-2 hover:bg-gray-50 rounded-lg transition-colors">
+          <button className="p-2 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors">
             <ChevronRight className="w-4 h-4 text-gray-600" />
           </button>
         </div>

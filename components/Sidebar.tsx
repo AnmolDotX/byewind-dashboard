@@ -113,7 +113,7 @@ const Sidebar = ({ isCollapsed }: SidebarProps) => {
 
   return (
     <aside
-      className={`fixed inset-y-0 left-0 flex flex-col bg-white transition-all duration-300 border-r border-gray-200 ${
+      className={`fixed inset-y-0 left-0 flex flex-col bg-white dark:bg-black transition-all duration-300 border-r border-gray-200 dark:border-gray-800 ${
         isCollapsed ? "w-16" : "w-64 px-4"
       }`}
     >
@@ -132,8 +132,10 @@ const Sidebar = ({ isCollapsed }: SidebarProps) => {
         {!isCollapsed && (
           <div>
             <h3 className="w-full flex items-center gap-6 mb-3">
-              <span className="text-gray-400">Favorites</span>
-              <span className="text-gray-300">Recently</span>
+              <span className="text-gray-500 dark:text-gray-400">
+                Favorites
+              </span>
+              <span className="text-gray-400 dark:text-gray-300">Recently</span>
             </h3>
             <ul
               className={`flex flex-col gap-1 list-none ${
@@ -148,7 +150,7 @@ const Sidebar = ({ isCollapsed }: SidebarProps) => {
                   <span className="text-gray-300 dark:text-gray-500 text-xl font-bold">
                     •
                   </span>
-                  <span className="text-gray-900 text-[15px] group-hover:text-blue-500">
+                  <span className="text-gray-900 dark:text-white text-[15px] group-hover:text-blue-500">
                     Overview
                   </span>
                 </Link>
@@ -161,7 +163,7 @@ const Sidebar = ({ isCollapsed }: SidebarProps) => {
                   <span className="text-gray-300 dark:text-gray-500 text-xl font-bold">
                     •
                   </span>
-                  <span className="text-gray-900 text-[15px] group-hover:text-blue-500">
+                  <span className="text-gray-900 dark:text-white text-[15px] group-hover:text-blue-500">
                     Projects
                   </span>
                 </Link>
@@ -173,9 +175,7 @@ const Sidebar = ({ isCollapsed }: SidebarProps) => {
         {/* Dashboard */}
         <div className="mt-4">
           {!isCollapsed && (
-            <h3 className="text-gray-400 dark:text-gray-500 text-sm mb-2">
-              Dashboards
-            </h3>
+            <h3 className="text-gray-400 text-sm mb-2">Dashboards</h3>
           )}
           <ul className="flex flex-col gap-1">
             {dashboardItems.map((item) => (
@@ -189,9 +189,7 @@ const Sidebar = ({ isCollapsed }: SidebarProps) => {
         {/* Pages */}
         <div className="mt-4">
           {!isCollapsed && (
-            <h3 className="text-gray-400 dark:text-gray-500 text-sm mb-2">
-              Pages
-            </h3>
+            <h3 className="text-gray-400 text-sm mb-2">Pages</h3>
           )}
           <ul className="flex flex-col gap-1">
             {pagesItems.map((item) => (

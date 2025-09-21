@@ -14,6 +14,7 @@ export type CardDetails = {
   isPercentValue: boolean;
   bgColor: string;
   href: string;
+  className?: string;
 };
 const Default = () => {
   const dataCards: CardDetails[] = [
@@ -25,6 +26,7 @@ const Default = () => {
       isPercentValue: false,
       bgColor: "#E3F5FF",
       href: "/dashboard/default/customers",
+      className: "dark:text-black",
     },
     {
       title: "Orders",
@@ -32,7 +34,7 @@ const Default = () => {
       percentage: "-0.03%",
       isDollar: false,
       isPercentValue: false,
-      bgColor: "#F7F9FB",
+      bgColor: "#C0CEDB20",
       href: "/dashboard/default/order-list",
     },
     {
@@ -41,7 +43,7 @@ const Default = () => {
       percentage: "+15.03%",
       isDollar: true,
       isPercentValue: false,
-      bgColor: "#F7F9FB",
+      bgColor: "#C0CEDB20",
       href: "/dashboard/default/revenue",
     },
     {
@@ -52,6 +54,7 @@ const Default = () => {
       isPercentValue: true,
       bgColor: "#E5ECF6",
       href: "/dashboard/default/growth",
+      className: "dark:text-black",
     },
   ];
 

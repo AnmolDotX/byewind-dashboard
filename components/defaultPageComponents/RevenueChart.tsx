@@ -21,22 +21,26 @@ const data = [
 
 export default function RevenueChart() {
   return (
-    <div className="bg-[#F7F9FB] p-6 rounded-2xl ">
+    <div className="bg-[#F7F9FB] dark:bg-white/10 p-6 rounded-2xl ">
       {/* Custom Title + Legend */}
       <div className="flex items-center gap-6 mb-4">
         <h2 className="text-sm pr-2 border-r border-gray-300 font-semibold">
           Revenue
         </h2>
-        <div className="flex items-center gap-4 text-sm text-gray-600">
+        <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-white">
           <span className="flex items-center gap-1">
             <span className="w-2 h-2 rounded-full bg-black inline-block" />
             Current Week{" "}
-            <span className="font-semibold text-gray-900">$58,211</span>
+            <span className="font-semibold text-gray-900 dark:text-gray-400">
+              $58,211
+            </span>
           </span>
           <span className="flex items-center gap-1">
             <span className="w-2 h-2 rounded-full bg-blue-300 inline-block" />
             Previous Week{" "}
-            <span className="font-semibold text-gray-900">$68,768</span>
+            <span className="font-semibold text-gray-900 dark:text-gray-400">
+              $68,768
+            </span>
           </span>
         </div>
       </div>

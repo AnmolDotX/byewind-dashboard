@@ -12,8 +12,10 @@ const TotalSales = () => {
   ];
 
   return (
-    <div className="bg-[#F7F9FB] rounded-2xl p-6 w-full max-w-md max-h-[344px]">
-      <h2 className="text-sm font-semibold text-gray-800 mb-2">Total Sales</h2>
+    <div className="bg-[#F7F9FB] dark:bg-white/10 rounded-2xl p-6 w-full max-w-md max-h-[344px]">
+      <h2 className="text-sm font-semibold text-gray-800 dark:text-white mb-2">
+        Total Sales
+      </h2>
 
       <div className="flex flex-col">
         <div className="w-full">
@@ -46,11 +48,11 @@ const TotalSales = () => {
                     className="w-3 h-3 rounded-full mr-2"
                     style={{ backgroundColor: item.color }}
                   />
-                  <span className="text-sm font-medium text-gray-700">
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-100">
                     {item.name}
                   </span>
                 </div>
-                <div className="text-sm text-gray-900">
+                <div className="text-sm text-gray-900 dark:text-gray-200">
                   ${item.value.toFixed(2)}
                 </div>
               </div>

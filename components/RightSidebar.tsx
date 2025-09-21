@@ -137,7 +137,7 @@ const RightSidebar = ({ isCollapsed }: RightSidebarProps) => {
 
   return (
     <aside
-      className={`fixed inset-y-0 right-0 bg-white border-l border-gray-200 flex flex-col transition-all duration-300
+      className={`fixed inset-y-0 right-0 bg-white dark:bg-black border-l border-gray-200 dark:border-gray-800 flex flex-col transition-all duration-300
         ${isCollapsed ? "w-0 overflow-hidden" : "w-64"}
       `}
     >

@@ -24,7 +24,7 @@ const maxRevenue = Math.max(...locations.map((l) => l.revenue));
 
 export default function RevenueByLocation() {
   return (
-    <div className="bg-[#F7F9FB] p-6 rounded-2xl max-h-[328px] flex flex-col">
+    <div className="bg-[#F7F9FB] dark:bg-white/10 p-6 rounded-2xl max-h-[328px] flex flex-col">
       <h2 className="text-sm font-semibold mb-2 flex-shrink-0">
         Revenue by Location
       </h2>

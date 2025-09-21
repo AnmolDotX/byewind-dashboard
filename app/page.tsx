@@ -3,13 +3,17 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[85vh] bg-gray-50 rounded-2xl p-4">
+    <div className="flex flex-col items-center justify-center min-h-[85vh] bg-gray-50 dark:bg-black rounded-2xl p-4">
       <div className="text-center space-y-6">
-        <h1 className="text-2xl font-semibold text-gray-800">Welcome 👋</h1>
-        <p className="text-gray-600">
+        <h1 className="text-2xl font-semibold text-gray-800 dark:text-white">
+          Welcome 👋
+        </h1>
+        <p className="text-gray-600 dark:text-gray-300">
           Navigate to{" "}
-          <span className="font-medium text-gray-800">default page</span> under
-          the dashboard seciton in sidebar.
+          <span className="font-medium text-gray-800 dark:text-gray-50">
+            default page
+          </span>{" "}
+          under the dashboard seciton in sidebar.
         </p>
 
         <Link

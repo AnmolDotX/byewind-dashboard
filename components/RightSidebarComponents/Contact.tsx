@@ -10,7 +10,9 @@ const Contact = ({ contact }: { contact: ContactType }) => {
         alt="profile picture"
         className="h-6 w-6"
       />
-      <p className="text-gray-800 text-sm text-nowrap">{contact?.name}</p>
+      <p className="text-gray-800 dark:text-white text-sm text-nowrap">
+        {contact?.name}
+      </p>
     </div>
   );
 };

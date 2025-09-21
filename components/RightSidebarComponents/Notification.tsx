@@ -8,7 +8,7 @@ const Notification = ({ id, title, time, Icon }: NotificationType) => {
         <Icon className="w-[17px] h-[17px]" />
       </div>
       <div className="flex-1 min-w-0">
-        <p className="truncate text-ellipsis text-gray-800 text-sm text-nowrap">
+        <p className="truncate text-ellipsis text-gray-800 dark:text-white text-sm text-nowrap">
           {title}
         </p>
         <p className="text-xs text-gray-400 text-nowrap">{time}</p>

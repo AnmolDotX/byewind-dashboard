@@ -111,7 +111,7 @@ const Header = ({
   }
 
   return (
-    <header className="flex items-center justify-between h-16 bg-white border-b border-gray-200 px-6 sticky top-0 dark:bg-gray-900 dark:border-gray-700 z-50">
+    <header className="flex items-center justify-between h-16 bg-white border-b border-gray-200 px-6 sticky top-0 dark:bg-black dark:border-gray-800 z-50">
       <div className="flex items-center space-x-4">
         {/* Left Sidebar Collapse Button */}
         <button
@@ -150,7 +150,7 @@ const Header = ({
                     <BreadcrumbLink asChild>
                       <Link
                         href={item.href}
-                        className="text-gray-400/80 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-400"
+                        className="text-gray-400/80 hover:text-gray-600 dark:text-white/40 dark:hover:text-gray-400"
                       >
                         {item.name}
                       </Link>
@@ -175,7 +175,7 @@ const Header = ({
           <input
             type="text"
             placeholder="Search"
-            className="pl-7 pr-7 py-1 border-none placeholder:text-gray-400/80 bg-gray-200/50 rounded-md focus:outline-none w-[160px] text-sm dark:bg-gray-700 dark:placeholder:text-gray-500 dark:text-white"
+            className="pl-7 pr-7 py-1 border-none placeholder:text-gray-400/80 bg-gray-200/50 rounded-md focus:outline-none w-[160px] text-sm dark:bg-white/10 dark:placeholder:text-gray-500 dark:text-white"
           />
           <span className="absolute inset-y-0 right-0 flex items-center pr-2 text-gray-400/60">
             <Command size={14} className="dark:text-gray-500" />

@@ -30,15 +30,15 @@ const TopSellingProducts = () => {
   ];
 
   return (
-    <div className="bg-[#F7F9FB] rounded-2xl p-6 w-full max-w-4xl">
-      <h2 className="text-sm font-semibold text-gray-800 mb-4">
+    <div className="bg-[#F7F9FB] dark:bg-white/10 rounded-2xl p-6 w-full max-w-4xl">
+      <h2 className="text-sm font-semibold text-gray-800 dark:text-white mb-4">
         Top Selling Products
       </h2>
 
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-gray-200">
+            <tr className="border-b border-gray-200 dark:border-gray-700">
               <th className="text-left py-3 text-xs font-normal text-gray-400">
                 Name
               </th>
@@ -56,16 +56,16 @@ const TopSellingProducts = () => {
           <tbody>
             {products.map((product, index) => (
               <tr key={index} className="">
-                <td className="py-2 text-sm font-normal text-black">
+                <td className="py-2 text-sm font-normal text-black dark:text-white">
                   {product.name}
                 </td>
-                <td className="py-2 text-sm font-normal text-black">
+                <td className="py-2 text-sm font-normal text-black dark:text-white">
                   {product.price}
                 </td>
-                <td className="py-2 text-sm font-normal text-black">
+                <td className="py-2 text-sm font-normal text-black dark:text-white">
                   {product.quantity}
                 </td>
-                <td className="py-2 text-sm font-normal text-black">
+                <td className="py-2 text-sm font-normal text-black dark:text-white">
                   {product.amount}
                 </td>
               </tr>

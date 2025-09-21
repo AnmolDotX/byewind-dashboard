@@ -18,7 +18,9 @@ const DataCard = ({
       style={{
         backgroundColor: cardDetails.bgColor,
       }}
-      className={`w-[202px] h-[112px] rounded-2xl hover:shadow-sm transition-all duration-300 ease-in-out cursor-pointer`}
+      className={`w-[202px] h-[112px] rounded-2xl hover:shadow-sm transition-all duration-300 ease-in-out cursor-pointer ${
+        cardDetails?.className || ""
+      }`}
     >
       <h6 className="font-semibold text-sm px-6 pt-6 pb-3">
         {cardDetails.title}
